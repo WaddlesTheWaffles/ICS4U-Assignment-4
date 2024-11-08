@@ -2,9 +2,9 @@ import './HeronFormula.css'
 import { useState } from 'react'
 
 function HeronFormula() {
-    const [sideA, setsideA] = useState(0);
-    const [sideB, setsideB] = useState(0);
-    const [sideC, setsideC] = useState(0);
+    const [sideA, setsideA] = useState();
+    const [sideB, setsideB] = useState();
+    const [sideC, setsideC] = useState();
     const [area, setarea] = useState("");
 
     function heronFormula(e) {
@@ -23,7 +23,7 @@ function HeronFormula() {
 
             <label>Area (Results):</label>
             <input readOnly type='text' value={area} />
-            <input type='submit' value={Calculate} />
+            <input type='submit' value="Calculate" />
         </form>
     )
 }
