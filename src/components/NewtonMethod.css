@@ -1,0 +1,18 @@
+form {
+    padding: 20px;
+    background-color: lightblue;
+    border-radius: 8px;
+    width: 300px;
+    margin: auto;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input[type="number"], input[type="text"], input[type="submit"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+}

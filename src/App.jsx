@@ -1,10 +1,14 @@
 import './App.css'
 import HeronFormula from './components/HeronFormula.jsx'
+import AmbiguousCase from './components/AmbiguousCase.jsx';
 
 function App() {
 
     return (
-        <HeronFormula />
+        <div>
+            <HeronFormula />
+            <AmbiguousCase />
+        </div>
     )
 }
 
