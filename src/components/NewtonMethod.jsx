@@ -24,8 +24,16 @@ function NewtonMethod() {
         setrootAprox(x1);
     }
     return (
-        <form>
-{/* finish laater */}
+        <form onSubmit={e => newtonMethod(e)}>
+            <h1>Newton's Method</h1>
+            <label>Root Guess:</label>
+            <input required type='number' value={rootGuess} onChange={(event) => { setrootGuess(Number(event.target.value)) }} />
+
+            <label>Root Approximation (Results):</label>
+            <input readOnly type='text' value={rootAprox} />
+            <input type='submit' value="Calculate" />
         </form>
     )
 }
+
+export default NewtonMethod
