@@ -2,6 +2,7 @@ import './App.css'
 import HeronFormula from './components/HeronFormula.jsx'
 import AmbiguousCase from './components/AmbiguousCase.jsx';
 import NewtonMethod from './components/NewtonMethod.jsx';
+import PolynomialFunction from './components/PolynomialFunction.jsx';
 
 function App() {
 
@@ -10,6 +11,7 @@ function App() {
             <HeronFormula />
             <AmbiguousCase />
             <NewtonMethod />
+            <PolynomialFunction />
         </div>
     )
 }
