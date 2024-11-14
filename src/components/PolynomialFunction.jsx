@@ -1,6 +1,7 @@
 import './PolynomialFunction.css'
 import { useState } from 'react'
 
+
 function PolynomialFunction() {
     const [coefficentsAsStr, setcoefficentAsStr] = useState();
     const [exponentsAsStr, setexponentsAsStr] = useState();
@@ -8,14 +9,14 @@ function PolynomialFunction() {
     const [fullPolyFunc, setfullPolyFunc] = useState();
     const [xCalculated, setxCalculated] = useState();
 
-    function polynomialFunction() {
-        e.preventdefault();
+    function polynomialFunction(e) {
+        e.preventDefault();
         let coefficents = coefficentsAsStr.split(" ");
         let exponents = exponentsAsStr.split(" ");
         let polynomialFullFunction = "f(x) = ";
 
         //Creates Equation
-        for (i = 0; i < coefficents.length; i++) {
+        for (let i = 0; i < coefficents.length; i++) {
             let tempValue = parseFloat(coefficents[i]);
 
             if (tempValue < 0) {
@@ -29,7 +30,7 @@ function PolynomialFunction() {
         let yValue = 0;
 
         //Calculates X value
-        for (i = 0; i < coefficents.length; i++) {
+        for (let i = 0; i < coefficents.length; i++) {
             yValue += parseFloat(coefficents[i]) * Math.pow(xValue, parseFloat(exponents[i]));
         }
 
