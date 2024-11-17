@@ -8,10 +8,13 @@ function App() {
 
     return (
         <div>
-            <HeronFormula />
-            <AmbiguousCase />
-            <NewtonMethod />
-            <PolynomialFunction />
+            <h1 className ="title" >Formula Calculators</h1>
+            <div className ="formulaCalculator">
+                <HeronFormula />
+                <AmbiguousCase />
+                <NewtonMethod />
+                <PolynomialFunction />
+            </div>
         </div>
     )
 }

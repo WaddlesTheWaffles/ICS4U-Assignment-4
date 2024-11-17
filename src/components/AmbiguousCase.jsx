@@ -2,10 +2,10 @@ import './AmbiguousCase.css'
 import { useState } from 'react'
 
 function AmbiguousCase() {
-    const [angleA, setangleA] = useState();
-    const [sideA, setsideA] = useState();
-    const [sideB, setsideB] = useState();
-    const [triangleType, settriangleType] = useState();
+    const [angleA, setangleA] = useState("");
+    const [sideA, setsideA] = useState("");
+    const [sideB, setsideB] = useState("");
+    const [triangleType, settriangleType] = useState("");
 
     function ambiguousCase(e) {
         e.preventDefault();
@@ -34,18 +34,18 @@ function AmbiguousCase() {
         }
     }
     return (
-        <form onSubmit={(e) => ambiguousCase(e)}>
-            <h1>Ambiguous Case</h1>
-            <label>Angle A:</label>
-            <input required type='number' value={angleA} onChange={(event) => { setangleA(Number(event.target.value)) }} />
-            <label>Side A:</label>
-            <input required type='number' value={sideA} onChange={(event) => { setsideA(Number(event.target.value)) }} />
-            <label>Side B:</label>
-            <input required type='number' value={sideB} onChange={(event) => { setsideB(Number(event.target.value)) }} />
+        <form className='calculator' onSubmit={(e) => ambiguousCase(e)}>
+            <h1 className='inCalculator'>Ambiguous Case</h1>
+            <label className='inCalculator'>Angle A:</label>
+            <input required className='inCalculator' type='number' value={angleA} onChange={(event) => { setangleA(Number(event.target.value)) }} />
+            <label className='inCalculator'>Side A:</label>
+            <input required className='inCalculator' type='number' value={sideA} onChange={(event) => { setsideA(Number(event.target.value)) }} />
+            <label className='inCalculator'>Side B:</label>
+            <input required className='inCalculator' type='number' value={sideB} onChange={(event) => { setsideB(Number(event.target.value)) }} />
 
-            <label>Triangle Type (Results):</label>
-            <input readOnly type='text' value={triangleType} />
-            <input type='submit' value="Calculate" />
+            <label className='inCalculator'>Triangle Type (Results):</label>
+            <input readOnly className='inCalculator' type='text' value={triangleType} />
+            <input id='calculateButton' className='inCalculator' type='submit' value="Calculate" />
         </form>
     )
 }

@@ -3,11 +3,11 @@ import { useState } from 'react'
 
 
 function PolynomialFunction() {
-    const [coefficentsAsStr, setcoefficentAsStr] = useState();
-    const [exponentsAsStr, setexponentsAsStr] = useState();
-    const [xValue, setxValue] = useState();
-    const [fullPolyFunc, setfullPolyFunc] = useState();
-    const [xCalculated, setxCalculated] = useState();
+    const [coefficentsAsStr, setcoefficentAsStr] = useState("");
+    const [exponentsAsStr, setexponentsAsStr] = useState("");
+    const [xValue, setxValue] = useState("");
+    const [fullPolyFunc, setfullPolyFunc] = useState("");
+    const [xCalculated, setxCalculated] = useState("");
 
     function polynomialFunction(e) {
         e.preventDefault();
@@ -35,23 +35,23 @@ function PolynomialFunction() {
         }
 
         setfullPolyFunc(polynomialFullFunction);
-        setxCalculated(functionXCaculated = "f(" + xValue + ") = " + yValue)
+        setxCalculated("f(" + xValue + ") = " + yValue)
     }
     return (
-        <form onSubmit={(e) => polynomialFunction(e)}>
-            <h1>Polynomial Function</h1>
-            <label>Coefficents:</label>
-            <input required type='text' value={coefficentsAsStr} onChange={(event) => { setcoefficentAsStr(String(event.target.value)) }} />
-            <label>Exponents:</label>
-            <input required type='text' value={exponentsAsStr} onChange={(event) => { setexponentsAsStr(String(event.target.value)) }} />
-            <label>X Value:</label>
-            <input required type='number' value={xValue} onChange={(event) => { setxValue(Number(event.target.value)) }} />
+        <form className='calculator' onSubmit={(e) => polynomialFunction(e)}>
+            <h1 className='inCalculator'>Polynomial Function</h1>
+            <label className='inCalculator'>Coefficents:</label>
+            <input required className='inCalculator' type='text' value={coefficentsAsStr} onChange={(event) => { setcoefficentAsStr(String(event.target.value)) }} />
+            <label> className='inCalculator'Exponents:</label>
+            <input required className='inCalculator' type='text' value={exponentsAsStr} onChange={(event) => { setexponentsAsStr(String(event.target.value)) }} />
+            <label className='inCalculator'>X Value:</label>
+            <input required className='inCalculator' type='number' value={xValue} onChange={(event) => { setxValue(Number(event.target.value)) }} />
 
-            <label>Polynomial Function (Results;)</label>
-            <input readOnly type='text' value={fullPolyFunc} />
-            <label>Polynomial Evaluation (Results:)</label>
-            <input readOnly type='text' value={xCalculated} />
-            <input type='submit' value="Calculate" />
+            <label className='inCalculator'>Polynomial Function (Results;)</label>
+            <input readOnly className='inCalculator' type='text' value={fullPolyFunc} />
+            <label className='inCalculator'>Polynomial Evaluation (Results:)</label>
+            <input readOnly className='inCalculator' type='text' value={xCalculated} />
+            <input id='calculateButton' className='inCalculator' type='submit' value="Calculate" />
         </form>
     )
 }

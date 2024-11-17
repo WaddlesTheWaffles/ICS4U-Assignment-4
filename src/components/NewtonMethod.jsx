@@ -2,8 +2,8 @@ import './NewtonMethod.css'
 import { useState } from 'react'
 
 function NewtonMethod() {
-    const [rootGuess, setrootGuess] = useState();
-    const [rootAprox, setrootAprox] = useState();
+    const [rootGuess, setrootGuess] = useState("");
+    const [rootAprox, setrootAprox] = useState("");
 
     function newtonMethod(e) {
         e.preventDefault();
@@ -24,14 +24,14 @@ function NewtonMethod() {
         setrootAprox(x1);
     }
     return (
-        <form onSubmit={e => newtonMethod(e)}>
-            <h1>Newton's Method</h1>
-            <label>Root Guess:</label>
-            <input required type='number' value={rootGuess} onChange={(event) => { setrootGuess(Number(event.target.value)) }} />
+        <form className='calculator' onSubmit={e => newtonMethod(e)}>
+            <h1 className='inCalculator'>Newton's Method</h1>
+            <label className='inCalculator'>Root Guess:</label>
+            <input required className='inCalculator' type='number' value={rootGuess} onChange={(event) => { setrootGuess(Number(event.target.value)) }} />
 
-            <label>Root Approximation (Results):</label>
-            <input readOnly type='text' value={rootAprox} />
-            <input type='submit' value="Calculate" />
+            <label className='inCalculator'>Root Approximation (Results):</label>
+            <input readOnly className='inCalculator' type='text' value={rootAprox} />
+            <input id='calculateButton' className='inCalculator' type='submit' value="Calculate" />
         </form>
     )
 }
