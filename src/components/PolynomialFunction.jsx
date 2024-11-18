@@ -42,7 +42,7 @@ function PolynomialFunction() {
             <h1 className='inCalculator'>Polynomial Function</h1>
             <label className='inCalculator'>Coefficents:</label>
             <input required className='inCalculator' type='text' value={coefficentsAsStr} onChange={(event) => { setcoefficentAsStr(String(event.target.value)) }} />
-            <label> className='inCalculator'Exponents:</label>
+            <label className='inCalculator'> Exponents:</label>
             <input required className='inCalculator' type='text' value={exponentsAsStr} onChange={(event) => { setexponentsAsStr(String(event.target.value)) }} />
             <label className='inCalculator'>X Value:</label>
             <input required className='inCalculator' type='number' value={xValue} onChange={(event) => { setxValue(Number(event.target.value)) }} />
